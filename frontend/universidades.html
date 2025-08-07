@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Gestão Acadêmica</h1>
+        <h1>Gestão Acadêmica CS IEEE UEM</h1>
         <nav>
             <ul>
                 <li><a href="universidades.html" class="active">Universidades</a></li>
@@ -19,8 +19,10 @@
 
     <main class="conteudo-principal">
         <section class="formulario-container">
-            <h2>Cadastrar Universidade</h2>
+            <h2 id="titulo-formulario">Cadastrar Universidade</h2>
             <form id="form-universidade">
+                <input type="hidden" id="universidade-id">
+
                 <div class="grupo-formulario">
                     <label for="uni-nome">Nome da Universidade:</label>
                     <input type="text" id="uni-nome" required>
@@ -40,7 +42,7 @@
                         <option value="0">Privada</option>
                     </select>
                 </div>
-                <button type="submit">Salvar Universidade</button>
+                <button type="submit" id="btn-salvar">Salvar Universidade</button>
             </form>
         </section>
 
@@ -53,7 +55,8 @@
                         <th>Nome</th>
                         <th>Sigla</th>
                         <th>Data de Criação</th>
-                        <th>Pública</th> </tr>
+                        <th>Pública</th>
+                        <th>Ações</th> </tr>
                 </thead>
                 <tbody id="lista-universidades">
                     </tbody>

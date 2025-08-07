@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Gestão de Disciplinas</title>
+    <title>Gestão de Disciplinas CS IEEE UEM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +19,10 @@
 
     <main class="conteudo-principal">
         <section class="formulario-container">
-            <h2>Cadastrar Disciplina</h2>
+            <h2 id="titulo-formulario">Cadastrar Disciplina</h2>
             <form id="form-disciplina">
+                <input type="hidden" id="disciplina-id">
+
                 <div class="grupo-formulario">
                     <label for="disciplina-curso">Curso:</label>
                     <select id="disciplina-curso" required>
@@ -39,7 +41,7 @@
                     <label for="disciplina-semestre">Semestre:</label>
                     <input type="text" id="disciplina-semestre" placeholder="Ex: 1, 2, Opcional..." required>
                 </div>
-                <button type="submit">Salvar Disciplina</button>
+                <button type="submit" id="btn-salvar">Salvar Disciplina</button>
             </form>
         </section>
 
@@ -52,7 +54,7 @@
                         <th>Carga Horária</th>
                         <th>Curso</th>
                         <th>Semestre</th>
-                    </tr>
+                        <th>Ações</th> </tr>
                 </thead>
                 <tbody id="lista-disciplinas">
                     </tbody>
