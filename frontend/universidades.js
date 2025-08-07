@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const apiUrl = 'http://127.0.0.1:5000/api/universidades';
 
-    //READ (GET): Busca todas as universidades na API e as exibe na tabela.
+    //Get: Busca todas as universidades na API e as exibe na tabela.
     async function buscarUniversidades() {
         try {
             const resposta = await fetch(apiUrl);
@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // update: prepara as informações de uma universidade para editar
+    // Update: prepara as informações de uma universidade para editar
     async function prepararEdicao(id) {
         try {
-            // Obervação: O back-end precisa ter uma rota para buscar um item por ID
+            // Observação: O back-end precisa ter uma rota para buscar um item por ID
             const resposta = await fetch(`${apiUrl}/${id}`);
             if (!resposta.ok) throw new Error('Falha ao buscar dados para edição.');
             

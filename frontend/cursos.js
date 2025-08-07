@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. MAPEAMENTO DOS ELEMENTOS ---
     const formulario = document.getElementById('form-curso');
     const idInput = document.getElementById('curso-id');
     const nomeInput = document.getElementById('curso-nome');
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!resposta.ok) throw new Error('Falha ao carregar universidades.');
             const universidades = await resposta.json();
             
-            seletorUniversidade.innerHTML = '<option value="">-- Selecione a Universidade --</option>';
+            seletorUniversidade.innerHTML = '<option value=""> Selecione a Universidade </option>';
             universidades.forEach(uni => {
                 const opcao = document.createElement('option');
                 opcao.value = uni.id;

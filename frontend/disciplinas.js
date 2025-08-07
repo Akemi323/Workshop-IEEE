@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!resposta.ok) throw new Error('Falha ao carregar cursos.');
             const cursos = await resposta.json();
             
-            seletorCurso.innerHTML = '<option value="">-- Selecione o Curso --</option>';
+            seletorCurso.innerHTML = '<option value=""> Selecione o Curso </option>';
             cursos.forEach(curso => {
                 const opcao = document.createElement('option');
                 opcao.value = curso.id;
